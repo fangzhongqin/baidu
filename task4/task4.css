@@ -1,0 +1,28 @@
+*{
+	margin:0;
+	padding: 0;
+}
+#num,button{
+	margin-left: 10px;
+	margin-top: 10px;
+	height:25px;
+}
+#ul1{
+	height:60px;
+	width:100%;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+#leftout{
+	margin-left: 100px;
+}
+li{
+	background-color: red;
+  	line-height: 50px;
+ 	height:50px;
+ 	width:50px;
+ 	list-style: none;
+ 	text-align: center;
+ 	float: left;
+ 	margin-left: 3px;
+}
