@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task4</title>
+	<link rel="stylesheet" type="text/css" href="task5.css">
+</head>
+<body>
+	<input type="number" id="num" min='10' max='100'>
+	<button id="leftin">左侧入</button>
+	<button id="rightin">右侧入</button>
+	<button id="leftout">左侧出</button>
+	<button id="rightout">右侧出</button>
+	<div>
+		<ul id='ul1'></ul>
+	</div>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var ul1=document.getElementById('ul1')
+		var num=document.getElementById('num');
+		var leftin=document.getElementById('leftin');
+		var rightin=document.getElementById('rightin');
+		var leftout=document.getElementById('leftout');
+		var rightout=document.getElementById('rightout');
+	    leftin.onclick=function(){
+	    	var li=document.createElement('li');
+	    	li.innerHTML='<div id="out"><div id="gaodu"></div></div>';
+	    	ul1.insertBefore(li,ul1.firstChild);
+	    	var out=document.getElementById('out');
+	    	var gaodu=document.getElementById('gaodu');
+	    	gaodu.style.height=num.value+'px';
+	    	
+	    	var aLi=document.getElementsByTagName('li');
+	    	if(aLi.length>60){
+	    		alert('添加元素超过60个')
+	    	}
+	    	li.onclick=function(){
+	    		ul1.removeChild(li);
+	    	}
+	    }
+	    rightin.onclick=function(){
+	    	var li=document.createElement('li');
+	    	li.innerHTML='<div id="out"><div id="gaodu"></div></div>';
+	    	ul1.insertBefore(li,ul1.firstChild);
+	    	var out=document.getElementById('out');
+	    	var gaodu=document.getElementById('gaodu');
+	    	gaodu.style.height=num.value+'px';
+	    	ul1.appendChild(li);
+	    	var aLi=document.getElementsByTagName('li');
+	    	if(aLi.length>60){
+	    		alert('添加元素超过60个')
+	    	}
+	    	li.onclick=function(){
+	    		ul1.removeChild(li);
+	    	}
+	    }
+	    leftout.onclick=function(){
+	    	ul1.removeChild(ul1.firstChild);
+	    }
+	    rightout.onclick=function(){
+	    	ul1.removeChild(ul1.lastChild);
+	    }
+}
+</script>
+</html>
